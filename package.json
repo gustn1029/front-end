@@ -1,0 +1,36 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel  build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustn1029/portfolio_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustn1029/portfolio_2/issues"
+  },
+  "homepage": "https://github.com/gustn1029/portfolio_2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.43.3"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.8",
+    "postcss": "^8.3.11",
+    "scss": "^0.2.4"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
