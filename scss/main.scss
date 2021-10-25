@@ -1,7 +1,7 @@
 .visual{margin-left: 250px;
     position: relative;
     overflow: hidden;
-.inner{display: flex; height: 96vh; margin: 0; z-index: 3;
+.inner{display: flex; height: 100vh; margin: 0; z-index: 3;
     flex-direction: column;
     justify-content: center;
 
@@ -13,33 +13,41 @@
 }
 
 h3{margin-bottom: 100px;
-    font-family: 'Poppins','맑은 고딕',dotum,'돋움', sans-serif; font-size: 90px; letter-spacing: -0.055em;
+    font-family: 'Poppins','맑은 고딕',dotum,'돋움', sans-serif; font-size: 95px; letter-spacing: -0.055em;
+    font-weight: 700;
 }
 p{font-size: 45px;}
 
 .bg{width: 100%; height: 100%;
-    position: absolute; left: 0; top: 0;
-    &::before,
-    &::after{content: ""; position: absolute;}
-    &::before{width: 235%;
-        height: 269%;
-        z-index: 2;
-        left: 50%;
-        top: 50%;
-        background-color: #000;
-        transform: translate(-71%, -77%) rotate(172deg);
-        border-radius: 100%;
+        position: absolute; left: 0; top: 0;
+
+        &::before,
+        &::after{content: ""; position: absolute;}
+        &::before{width: 235%;
+            height: 269%;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            background-color: #000;
+            transform: translate(-71%, -77%) rotate(172deg);
+            border-radius: 100%;
+        }
+        &::after{width: 100%; height: 100%; z-index: 0; left: 0; top: 0;
+            background-color: #fff;
+        }
     }
-    &::after{width: 100%; height: 100%; z-index: 0; left: 0; top: 0;
-        background-color: #fff;
+
+    &::after{content: ""; width: 65%; height: 66%;
+        position: absolute; right: -54px; bottom: 0;
+        background-image: url(/img/visual_bg02.gif);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        mix-blend-mode: darken;
     }
 }
-&::after{content: ""; width: 65%; height: 66%;
-    position: absolute; right: -54px; bottom: 0;
-    background-image: url(/img/visual_bg02.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    mix-blend-mode: darken;
-}
+
+.section {padding: 7% 0;
+    .tit{font-family: 'Poppins','맑은 고딕',dotum,'돋움', sans-serif; font-size: 5.5rem; letter-spacing: -0.05rem; font-weight: 700;}
+    .desc{font-size: 1.5rem; margin-bottom: 5%;}
 }

@@ -41,7 +41,7 @@ body{font-size: 16px; letter-spacing: -0.04em; font-family: 'Noto Sans KR','ë§‘ì
     position: absolute; left: -9999px; top: 0; 
 }
 
-.inner {max-width: 1360px; width: 100%; padding: 0 30px; margin: 0 auto;}
+.inner {max-width: 1360px; width: 100%; padding: 0 30px;}
 
 #header{
     display: flex; padding-top: 50px; width: 180px; height: 93vh;
@@ -61,10 +61,8 @@ body{font-size: 16px; letter-spacing: -0.04em; font-family: 'Noto Sans KR','ë§‘ì
     }
 }
 
-#container{display: block;}
+#container{margin-left: 250px; display: block;}
 #footer{}
 
 @media (max-width: 1740px) {
-    .inner{margin: 0;}
-    #container{margin-left: 250px;}
 }
