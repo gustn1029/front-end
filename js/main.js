@@ -15,8 +15,8 @@ function getSection() {
     const link = document.querySelectorAll('.gnb_link');
     const scrollTop = document.documentElement.scrollTop;
     
-    if(scrollTop >= container.offsetTop && scrollTop <= container.offsetTop + container.scrollHeight) {
-        for(let i = 0; i < sections.length; i++) {
+    for(let i = 0; i < sections.length; i++) {
+        if(scrollTop >= container.offsetTop && scrollTop <= container.offsetTop + container.scrollHeight) {
             let point = sections[0].offsetTop + Math.abs(sections[0].getBoundingClientRect().top);
             if(sections[i].offsetTop <= point) {
                 if(i > 0) {
@@ -28,6 +28,8 @@ function getSection() {
             } else {
                 link[i].classList.remove('active');
             }
+        } else {
+            link[i].classList.remove('active');
         }
     } 
 }
