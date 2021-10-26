@@ -45,7 +45,7 @@ input, select{
 
 img{width: 100%;}
 
-body{font-size: 16px; letter-spacing: -0.04em; font-family: 'S-CoreDream-5Medium','Noto Sans KR','맑은 고딕',dotum,'돋움', sans-serif; color: #fff;
+body{font-size: 16px; letter-spacing: -0.04em; font-family: 'S-CoreDream-3Light','Noto Sans KR','맑은 고딕',dotum,'돋움', sans-serif; color: #fff;
     background-color: #000; 
 }
 
@@ -78,18 +78,32 @@ body{font-size: 16px; letter-spacing: -0.04em; font-family: 'S-CoreDream-5Medium
 
     .logo{margin-bottom: 250px; width: 70px; height: 70px;
         position: relative;
-
+        img{transition: all 0.5s;}
         ::before{content: ""; width: 100%; height: 100%; opacity: 0;
             position: absolute; left: 0; top: 0;
             background-image: url(/img/logo_h.png);
+            transition: all 0.3s;
+        }
+        &:hover {
+            img{transform: translate(-10%, -10%);}
+            ::before{opacity: 0.25;}
         }
     }
 }
-#nav {
+#nav {width: 90%;
     ul{}
     li{
         & + li{margin-top: 30px;}
         .gnb_link{ display: block; width: 100%; text-align: center; padding: 10px 0;
+            position: relative;
+            &::before{position: absolute; right: 0; top: 50%; width: 3px; height: 0%;
+            background-color: rgba(255, 255, 255, 0.8);
+            transform: translate(0, -50%);
+            transition: all 0.5s;
+            }
+            &.active::before{
+                height: 50%;
+            }
         }
     }
 }

@@ -84,7 +84,7 @@ p{font-size: 45px;}
 .skill {display: flex; flex-wrap: wrap; justify-content: center; width: 80%; margin: 0 auto;
     dt{width: 100%; 
         @include large-text; text-align: center;
-        &::before{ width: 130px; height: 20px;
+        &::before{ width: 130px; height: 15px;
             background-color: rgba($color: #fff, $alpha: 0.3);
             position: absolute; left: 50%; bottom: 0;
             transform: translate(-50%, -10%);
@@ -98,7 +98,7 @@ p{font-size: 45px;}
         border-radius: 20px;
         // background-color: #fff;
         color: #fff;
-        &::before{display: block; width: 130px; height: 130px; margin-bottom: 15px;
+        &::before{display: block; width: 130px; height: 130px; margin-bottom: 20px;
             background-position: center; background-repeat: no-repeat; 
             border-radius: 100%;
             box-shadow: 2px 7px 10px rgba($color: #fff, $alpha: 0.2);

@@ -1,5 +1,3 @@
-const header = document.getElementById('header');
-const nav = document.getElementById('nav');
 
 function getTitle() {
     const gnbLink = document.querySelectorAll('.gnb_link');
@@ -10,3 +8,28 @@ function getTitle() {
 }
 
 getTitle();
+
+function getSection() {
+    const container = document.getElementById('container');
+    const sections = document.querySelectorAll('.section');
+    const link = document.querySelectorAll('.gnb_link');
+    const scrollTop = document.documentElement.scrollTop;
+    
+    if(scrollTop >= container.offsetTop && scrollTop <= container.offsetTop + container.scrollHeight) {
+        for(let i = 0; i < sections.length; i++) {
+            let point = sections[0].offsetTop + Math.abs(sections[0].getBoundingClientRect().top);
+            if(sections[i].offsetTop <= point) {
+                if(i > 0) {
+                    link[i-1].classList.remove('active');
+                    link[i].classList.add('active');
+                } else {
+                    link[i].classList.add('active');
+                }
+            } else {
+                link[i].classList.remove('active');
+            }
+        }
+    } 
+}
+
+window.addEventListener('scroll', getSection);
