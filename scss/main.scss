@@ -94,13 +94,14 @@ p{font-size: 45px;}
 
     dd{width: calc((100% / 4) - 16px); margin: 0 8px; display: flex; padding: 3% 0;
         flex-direction: column; justify-content: center; align-items: center;
+        font-size: 20px;
         border-radius: 20px;
         // background-color: #fff;
         color: #fff;
         &::before{display: block; width: 130px; height: 130px; margin-bottom: 15px;
             background-position: center; background-repeat: no-repeat; 
             border-radius: 100%;
-            box-shadow: 1px 7px 15px rgba($color: #fff, $alpha: 0.2);
+            box-shadow: 2px 7px 10px rgba($color: #fff, $alpha: 0.2);
         }
 
     }
