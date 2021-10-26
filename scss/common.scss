@@ -43,10 +43,19 @@ input, select{
     appearance:none;
 }
 
-img{width: 100%;}
+img{width: 100%;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+html {scroll-behavior: smooth;}
 
 body{font-size: 16px; letter-spacing: -0.04em; font-family: 'S-CoreDream-3Light','Noto Sans KR','맑은 고딕',dotum,'돋움', sans-serif; color: #fff;
     background-color: #000; 
+    &::-webkit-scrollbar{width: 7px;}
+    &::-webkit-scrollbar-thumb{background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
 }
 
 .skip_nav{
