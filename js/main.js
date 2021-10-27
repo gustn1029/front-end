@@ -42,4 +42,15 @@ function getSection() {
     } 
 }
 
+function copy() {
+    const conLink = document.querySelectorAll('.contact_link');
+    conLink[0].addEventListener('click', function(e){
+        e.preventDefault();
+        const value = conLink[0].getAttribute('data-value');
+        console.log(value);
+
+        return document.execCommand('copy');
+    })
+}
+copy();
 window.addEventListener('scroll', getSection);

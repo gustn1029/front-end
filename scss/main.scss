@@ -23,8 +23,6 @@ $wrap_bt : 5%;
     h3{margin-bottom: 100px; width: 100%;
         font-family: 'Poppins','맑은 고딕',dotum,'돋움', sans-serif; font-size: 5.5vw; letter-spacing: -0.055em;
         font-weight: 700; color: #fff;
-        
-        br{display: none;}
     }
     p{font-size: 1.8vw;}
 
@@ -53,7 +51,7 @@ $wrap_bt : 5%;
                 }
             }
             dd{font-size: 25px;
-                & + dd{margin-top: 2%;}
+                & + dd{margin-top: 3%;}
                 span{display: block; margin-bottom: 1%;}
             }
         }
@@ -174,6 +172,11 @@ $wrap_bt : 5%;
     @at-root .js_wrap{
         > li + li{margin-top: 10%;}
         .js{position: relative;  margin: 0 auto 10%;
+            &.bg_white{
+                background-color: rgba($color: #fff, $alpha: 0.1);
+                border: 1px solid #fff;
+                box-shadow: 1px 5px 15px rgba($color: #fff, $alpha: 0.2);
+            }
             &.slide{width: 80%;
                 // .visual_test_wrap {margin: 0 auto 60px;}
                 .slide_list {position: relative;}
@@ -210,7 +213,6 @@ $wrap_bt : 5%;
                 }
             }
             &.popup {width: 50%; height: 300px;
-                background-color: #fff;
                 border-radius: 20px;
                 .thisBtn{ padding: 0.5em 3em; 
                     background-color: royalblue; 
@@ -221,6 +223,7 @@ $wrap_bt : 5%;
                 }
                 .showBox{  padding: 1em; display: none; width: 80%;
                     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3); 
+                    background-color: #fff;
                     animation: on 0.3s ease-in-out;
                     position: absolute; left: 50%; top: 60%;
                     transform: translate(-50%, 0);
@@ -241,18 +244,33 @@ $wrap_bt : 5%;
             }
             &.count {width: 50%; height: 200px; display: flex;
                  justify-content: center; align-items: center;
-                background-color: #fff;
+                 
                 border-radius: 20px;
                 button{display: block; width: 100px; height: 30px; margin-right: 30px;
                     color: #222;
                 }
-                p{color: #222;}
+                p{color: #fff;}
             }
         }
         .text_wrap{display: flex; width: 100%;
             > div {width: calc(60% - 10px); margin-right: 20px;}
             dl{width: calc(40% - 10px);}
             strong, p{text-transform: uppercase; word-break: keep-all;}
+        }
+    }
+}
+
+// section4
+
+#section04 {
+    @at-root .contact_wrap {
+        > p, > strong{text-align: center; font-size: 1.5rem; color: rgba($color: #fff, $alpha: 0.9);}
+        p{margin-bottom: 10px;}
+        strong{display: block; margin-bottom: 10%;}
+        li{font-size: 1.2rem; text-align: center;
+            &:first-child{margin-bottom: 5%;}
+        p{margin-right: 10px; font-size: 2.3rem;}
+        a{font-size: 1.3rem;}
         }
     }
 }
@@ -335,6 +353,10 @@ $wrap_bt : 5%;
     .about_text_wrap dd{font-size: 1.1rem;}
 
     .js_wrap .js.slide{width: 90%; margin-bottom: 80px;}
+
+    .contact_wrap {
+        > p, > strong{font-size: 1.2rem;}
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -377,6 +399,14 @@ $wrap_bt : 5%;
 
     .js_wrap .js.slide .btn_wrap{width: 90%;}
     .js_wrap .js.slide .btn_wrap a{font-size: 1.5rem;}
+
+    .contact_wrap {
+        > p, > strong{font-size: 1.1rem;}
+        li{
+            p{font-size: 2rem;}
+            a{font-size: 1.1rem;}
+        }
+    }
 }
 
 @media screen and (max-width: 350px) {
